@@ -8,9 +8,10 @@
 package org.pm.simple;
 import javax.xml.ws.Endpoint;
 
+
 public class MySoapServer {
     public static void main(String[] args) {
-        String serviceAddress = "http://192.168.1.7:9099/mysoap";
+        String serviceAddress = "http://localhost:9099/mysoap";
         MyService implementor = new MyServiceImpl();
         Endpoint ep = Endpoint.publish(serviceAddress, new MyServiceImpl());
     }

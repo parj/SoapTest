@@ -14,5 +14,5 @@ import javax.jws.WebService;
 public interface MyService {
     public String hello();
 
-   // public String sayHi(@WebParam(name="text") String text);
+    public String sayHi(@WebParam(name="text") String text);
 }
