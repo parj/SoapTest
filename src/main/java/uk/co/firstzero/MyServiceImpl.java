@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package org.pm.simple;
+package uk.co.firstzero;
 import org.apache.cxf.rs.security.cors.CrossOriginResourceSharing;
 
 import javax.annotation.Resource;

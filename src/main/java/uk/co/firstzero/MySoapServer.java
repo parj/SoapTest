@@ -5,7 +5,7 @@
  * Time: 17:50
  * To change this template use File | Settings | File Templates.
  */
-package org.pm.simple;
+package uk.co.firstzero;
 import javax.xml.ws.Endpoint;
 
 

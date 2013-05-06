@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>SOAP JavaScript Client Test</title>
-    <script type="text/javascript">
-        function soap() {
-        var http = new XMLHttpRequest();
+    <head>
+        <title>SOAP JavaScript Client Test</title>
+        <script type="text/javascript">
+            function soap() {
+            var http = new XMLHttpRequest();
 
-        http.open("POST", "http://localhost:9099/mysoap/HelloWorld/", true);
+            http.open("POST", "http://localhost:9099/mysoap/HelloWorld/", true);
 
-        var sr = '<?xml version="1.0" encoding="utf-8"?> ' +
-        '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"> ' +
-        '<soap:Body> ' +
-            '<tns:hello xmlns:tns="http://simple.pm.org/"> ' +
-                '</tns:hello> ' +
-            '</soap:Body> ' +
-        '</soap:Envelope>';
+            var sr = '<?xml version="1.0" encoding="utf-8"?> ' +
+            '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"> ' +
+            '<soap:Body> ' +
+                '<tns:hello xmlns:tns="http://firstzero.co.uk/"> ' +
+                    '</tns:hello> ' +
+                '</soap:Body> ' +
+            '</soap:Envelope>';
 
-        http.onreadystatechange = function () {
-            if (http.readyState == 4) {
-                if (http.status == 200) {
-                    alert('done use firebug to see responce');
+            http.onreadystatechange = function () {
+                if (http.readyState == 4) {
+                    if (http.status == 200) {
+                        alert('done use firebug to see responce');
+                    }
                 }
             }
-        }
 
-        //Don't send pre-flight request
-        http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        http.send(sr);
-        }
-    </script>
-</head>
-<body>
-<form name="Demo" action="" method="post">
-    <div>
-        <input type="button" value="Soap" onclick="soap();" />
-    </div>
-</form>
-</body>
+            //Don't send pre-flight request
+            http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            http.send(sr);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="Demo" action="" method="post">
+            <div>
+                <input type="button" value="Soap" onclick="soap();" />
+            </div>
+        </form>
+    </body>
 </html>
